@@ -1,0 +1,29 @@
+<h1 style="font-size: 60px; color: #fff; "><strong>Need Music?</strong></h1>
+<p style="font-size: 18px; color: #9d9d9d; ">Use the ngSpotify app to browse new releases and find your favorite songs</p>
+<form class="main">
+	<div class="form-group">
+		<input type="text" name="searchStr" [(ngModel)]="searchStr" (keyup)="searchMusic()" class="form-control" placeholder="Search your favorite songs..." title="Search your favorite songs">
+	</div>
+</form>
+	
+<div *ngIf="searchRes">
+	<div *ngFor="let res of searchRes">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<div class="search-res well">
+					<div class="col-xs-4 col-sm-2 col-md-1">
+						<img class="artist-img" data-src="{{res.images[0].url}}" alt="">
+					</div>
+					<!-- <div class="col-md-8"> -->
+						<div class="col-xs-8 col-sm-10 col-md-11">
+
+							<h4> <a routerLink="/artist/{{res.id}}">{{res.name}}</a></h4>
+							<strong>Genre: </strong>
+							<span *ngFor="let genres of res.genres"> {{genres}} </span>
+						</div>
+					<!-- </div> -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

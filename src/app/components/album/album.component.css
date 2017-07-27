@@ -1,0 +1,41 @@
+
+
+.artist-header {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: solid 1px #333;
+}
+
+.artist-thumb {
+	width: 80px;
+	height: 80px !important;
+	/* height: auto; */
+	float: left; 
+	margin-right: 10px;
+}
+.well, .thumb-nail {
+	background: #333 !important;
+ 	border: none;
+ 	color: #fff;
+}
+.well, .artist-albums {
+	margin-bottom: 20px;
+	/* overflow: ; */
+	/* min-height: 400px; */
+}
+.album {
+	text-align: center;
+	background: #333;
+	padding: 10px 20px;
+	/* border: grey 1px solid; */
+}
+.album-thumb {
+	width: 100%;
+	background: #222;
+	border: none;
+}
+.btn-block {
+	background: rgb(70, 69, 69);
+	color: #fff;
+	border: none;
+}
